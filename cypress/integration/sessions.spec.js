@@ -1,5 +1,6 @@
 describe('User Auth - Sessions', function() {
   beforeEach(function() {
+    cy.task('taskTruncateTables')
     cy.task('taskCreateTestUser')
   })
 

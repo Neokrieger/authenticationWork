@@ -44,11 +44,13 @@ const authenticator = (req, res, next) => {
 }
 
 app.use('/registrations', registrationsRouter)
+
 app.use('/sessions', sessionsRouter)
 
 app.get('/', (req, res) => {
   res.render('index')
 })
+
 app.get('/top-secret', authenticator, (req, res) => {
   res.render('top-secret')
 })
